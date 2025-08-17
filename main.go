@@ -38,7 +38,7 @@ func readConn(conn net.Conn) {
 		fmt.Printf("%s\n", string(data))
 
 	}
-	fmt.Fprintf(conn, "HTTP/2.0 200 OK\r\n"+
+	fmt.Fprintf(conn, "HTTP/1.1 200 OK\r\n"+
 		"Content-Type: text/html\r\n"+
 		"Server: Aspect\r\n\r\n"+
 		"<h1>Request Type: %v</h1>", statusString)
